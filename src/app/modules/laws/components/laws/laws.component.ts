@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Law } from '../../models/law.model';
+import { Observable } from 'rxjs/Observable';
+import { Store } from '@ngrx/store';
+import * as fromStore from '../../store';
 
 @Component({
   selector: 'app-laws',
@@ -6,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./laws.component.scss']
 })
 export class LawsComponent implements OnInit {
-
-  constructor() { }
+  law$: Observable<Law[]>;
+  constructor(private store: Store<fromStore.DocumentsState>) {}
 
   ngOnInit() {
+    this.law$ = this.store.select(fromStore.getAllPizzas);
+    // this.store.select<any>('documents').subscribe(state => {
+    //   console.log(state);
+    // });
   }
-
 }

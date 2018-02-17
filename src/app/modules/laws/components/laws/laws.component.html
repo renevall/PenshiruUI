@@ -1,3 +1,12 @@
 <p>
   laws works!
 </p>
+
+<ul>
+  <div *ngIf="!((law$ | async)?.length)">
+    No Laws, wait for Rene to Add them
+  </div>
+  <li *ngFor="let law of (law$ | async)">
+    {{law.name}}
+  </li>
+</ul>

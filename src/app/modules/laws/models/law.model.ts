@@ -1,4 +1,8 @@
 export interface Law {
-  id?: number;
+  _id?: string;
+  index: number;
+  guid: string;
+  isActive: true;
   name?: string;
+  publish: string;
 }
