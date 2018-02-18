@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './modules/shared/page-not-found/page-not-found.component';
 
 // import { NameComponent } from './name.component';
 
@@ -8,7 +9,8 @@ const routes: Routes = [
   {
     path: 'laws',
     loadChildren: './modules/laws/laws.module#LawsModule'
-  }
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
