@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { LawsModule } from './modules/laws/laws.module';
 import { ThemeModule } from './modules/theme/theme.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { ThemeModule } from './modules/theme/theme.module';
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     AppRoutingModule,
     ThemeModule,
+    SharedModule,
     LawsModule
   ],
   providers: [],

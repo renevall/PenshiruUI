@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatSidenavModule } from '@angular/material';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  imports: [FlexLayoutModule, MatCardModule],
-  exports: [FlexLayoutModule, MatCardModule],
+  imports: [
+    FlexLayoutModule,
+    MatCardModule,
+    MatSidenavModule,
+    NoopAnimationsModule
+  ],
+  exports: [
+    FlexLayoutModule,
+    MatCardModule,
+    MatSidenavModule,
+    NoopAnimationsModule
+  ],
   declarations: []
 })
 export class ThemeModule {}

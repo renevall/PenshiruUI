@@ -1,19 +1,22 @@
-<p>
-  laws works!
-</p>
-
-<ul>
-  <div *ngIf="!((law$ | async)?.length)">
-    No Laws, wait for Rene to Add them
-  </div>
-  <mat-card class="law-list-card" *ngFor="let law of (law$ | async)">
-    <mat-card-header>
-      <div mat-card-avatar class="material-icons">account_balance</div>
-      <mat-card-title fxLayout="row" fxLayoutAlign="space-between">
-        <div>{{law.name}}</div>
-        <div>Added: {{law.publish | date}}</div>
-      </mat-card-title>
-      <mat-card-subtitle>Published on the newspaper of {{law.publish | date}}</mat-card-subtitle>
-    </mat-card-header>
-  </mat-card>
-</ul>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <app-navbar-left></app-navbar-left>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ul>
+      <div *ngIf="!((law$ | async)?.length)">
+        No Laws, wait for Rene to Add them
+      </div>
+      <mat-card class="law-list-card" *ngFor="let law of (law$ | async)">
+        <mat-card-header>
+          <div mat-card-avatar class="material-icons">account_balance</div>
+          <mat-card-title fxLayout="row" fxLayoutAlign="start center">
+            <div>{{law.name}}</div>
+            <div>Added: {{law.publish | date}}</div>
+          </mat-card-title>
+          <mat-card-subtitle>Published on the newspaper of {{law.publish | date}}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </ul>
+  </mat-sidenav-content>
+</mat-sidenav-container>

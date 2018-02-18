@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { reducers } from './store';
 import { ThemeModule } from '../theme/theme.module';
+import { SharedModule } from '../shared/shared.module';
 
 // import { NameComponent } from './name.component';
 
@@ -16,6 +17,7 @@ import { ThemeModule } from '../theme/theme.module';
     CommonModule,
     LawRoutingModule,
     ThemeModule,
+    SharedModule,
     StoreModule.forFeature('documents', reducers)
   ],
   exports: [],
