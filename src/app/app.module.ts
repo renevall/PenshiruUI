@@ -7,6 +7,7 @@ import { metaReducers } from '../reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LawsModule } from './modules/laws/laws.module';
 import { ThemeModule } from './modules/theme/theme.module';
@@ -20,8 +21,8 @@ import { SharedModule } from './modules/shared/shared.module';
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     AppRoutingModule,
     ThemeModule,
-    SharedModule,
-    LawsModule
+    LawsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

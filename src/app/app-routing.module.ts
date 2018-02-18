@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'laws' },
   {
-    path: 'products',
+    path: 'laws',
     loadChildren: './modules/laws/laws.module#LawsModule'
   }
 ];
