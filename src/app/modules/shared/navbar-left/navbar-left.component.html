@@ -1,5 +1,5 @@
 <div class="sidenav" fxLayout="column" fxLayoutAlign="start center">
-  <div *ngFor="let item of menu" class="material-icons md-light md-36 item">
+  <a *ngFor="let item of menu" [routerLink]="item.link" routerLinkActive="active" class="material-icons md-light md-36 item">
     {{item.icon}}
-  </div>
+  </a>
 </div>

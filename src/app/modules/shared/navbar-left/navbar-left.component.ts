@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarLeftComponent implements OnInit {
   menu = [
-    { icon: 'book', name: 'Laws' },
-    { icon: 'star', name: 'Favorites' },
-    { icon: 'date_range', name: 'Calendar' },
-    { icon: 'settings', name: 'Config' }
+    { icon: 'book', name: 'Laws', link: '/laws' },
+    { icon: 'star', name: 'Favorites', link: '/favorites' },
+    { icon: 'date_range', name: 'Calendar', link: '/calendar' },
+    { icon: 'settings', name: 'Config', link: '/config' }
   ];
 
   constructor() {}
