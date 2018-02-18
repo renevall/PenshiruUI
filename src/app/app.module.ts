@@ -6,8 +6,10 @@ import { StoreModule } from '@ngrx/store';
 import { metaReducers } from '../reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { LawsModule } from './modules/laws/laws.module';
 import { AppRoutingModule } from './app-routing.module';
+
+import { LawsModule } from './modules/laws/laws.module';
+import { ThemeModule } from './modules/theme/theme.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
     StoreModule.forRoot({}, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     AppRoutingModule,
+    ThemeModule,
     LawsModule
   ],
   providers: [],
