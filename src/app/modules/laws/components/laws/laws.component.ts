@@ -4,6 +4,8 @@ import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import * as fromStore from '../../store';
 
+import { DatePipe } from '@angular/common';
+
 @Component({
   selector: 'app-laws',
   templateUrl: './laws.component.html',

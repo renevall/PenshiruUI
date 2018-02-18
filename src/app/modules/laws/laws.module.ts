@@ -7,6 +7,7 @@ import { LawsComponent } from './components/laws/laws.component';
 import { StoreModule } from '@ngrx/store';
 
 import { reducers } from './store';
+import { ThemeModule } from '../theme/theme.module';
 
 // import { NameComponent } from './name.component';
 
@@ -14,6 +15,7 @@ import { reducers } from './store';
   imports: [
     CommonModule,
     LawRoutingModule,
+    ThemeModule,
     StoreModule.forFeature('documents', reducers)
   ],
   exports: [],

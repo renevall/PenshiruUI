@@ -6,7 +6,14 @@
   <div *ngIf="!((law$ | async)?.length)">
     No Laws, wait for Rene to Add them
   </div>
-  <li *ngFor="let law of (law$ | async)">
-    {{law.name}}
-  </li>
+  <mat-card class="law-list-card" *ngFor="let law of (law$ | async)">
+    <mat-card-header>
+      <div mat-card-avatar class="material-icons">account_balance</div>
+      <mat-card-title fxLayout="row" fxLayoutAlign="space-between">
+        <div>{{law.name}}</div>
+        <div>Added: {{law.publish | date}}</div>
+      </mat-card-title>
+      <mat-card-subtitle>Published on the newspaper of {{law.publish | date}}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
 </ul>
